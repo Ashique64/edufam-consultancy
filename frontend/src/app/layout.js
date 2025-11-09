@@ -10,7 +10,7 @@ export const metadata = {
     description:
         "EduFam provides expert guidance for studying in Germany. Get end-to-end support for university admissions, visa processing, and settlement in Germany. 500+ success stories with 98% visa approval rate.",
     icons: {
-        icon: "/Images/EduFam-Fav.png",
+        icon: "/favicon.png",
     },
     keywords:
         "study in Germany, German education, abroad studies, university admission Germany, visa consultation, education consultancy",
