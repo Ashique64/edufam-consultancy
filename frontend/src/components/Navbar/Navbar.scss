@@ -1,0 +1,253 @@
+.navbars {
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 333;
+    transition: background-color 0.3s ease;
+
+    /* Add a pseudo-element for the background and blur effect */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: background 0.3s ease, backdrop-filter 0.3s ease;
+        z-index: -1; /* Place it behind the navbar content */
+    }
+
+
+    &.sticky {
+        &::before {
+        background: rgba(4, 66, 131, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    }
+
+    .container-fluid {
+        max-width: 1280px;
+        padding: 5px 12px;
+        overflow: hidden;
+
+        .nav_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav_col1 {
+                .logo {
+                    padding: 0px 20px;
+                    overflow: hidden;
+                    a {
+                        text-decoration: none;
+                        img {
+                            object-fit: cover;
+                            width: 100px;
+                            height: auto;
+                            max-height: 100px;
+                            transform: scale(1.2);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .nav_col2 {
+                #mobile_menu {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    ul {
+                        margin-left: 20px;
+                        margin-bottom: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        
+                        li {
+                            list-style: none;
+                            margin: 0 10px;
+                            display: inline-block;
+                            
+                            a {
+                                font-family: var(--secondary-font);
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 16px;
+                                letter-spacing: 1px;
+                                text-transform: capitalize;
+                                margin-right: 6px;
+                                padding: 30px 0px;
+                                display: inline-block;
+                                position: relative;
+                                text-decoration: none;
+                                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+                                &:hover {
+                                    color: var(--accent-color) !important;
+                                    transform: translateY(-5px);
+                                }
+                            }
+                        }
+
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .nav_col3 {
+                display: none;
+                .items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .mobile_icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .navbars {
+        padding: 5px 10px;
+        .container-fluid .nav_row {
+            .nav_col2 {
+                #mobile_menu {
+                    ul {
+                        display: none; 
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: start;
+                        position: fixed;
+                        top: 0;
+                        right: -100%;
+                        height: 100vh;
+                        min-width: 300px;
+                        padding: 40px;
+                        background-color: rgb(0, 200, 255);
+                        background-image: url("/Images/hero/slider-shape-3-1.png");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        transition: 0.3s ease-in-out;
+                        z-index: 99;
+
+                        i {
+                            display: block;
+                            position: absolute;
+                            top: 10px;
+                            right: 8px;
+                            font-size: 30px;
+                            height: 45px;
+                            line-height: 45px;
+                            width: 50px;
+                            color: var(--accent-color);
+                            text-align: center;
+                            border-radius: 10px;
+                            margin-left: 30px;
+                            z-index: 100;
+                            transition: 0.3s ease-in-out;
+                        }
+
+                        li a {
+                            padding: 30px 0;
+
+                            &::after {
+                                display: none;
+                            }
+                            &:hover {
+                                color: var(--accent-color);
+                                transition: 0.4s ease-in-out;
+                            }
+                        }
+                    }
+
+                    .show {
+                        right: 0;
+                        display: flex;
+                    }
+                }
+            }
+            .nav_col3 {
+                display: block;
+                position: absolute;
+                right: 0;
+                .items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+
+                    .call_us {
+                        display: none;
+                    }
+
+                    .nav_button button {
+                        font-size: 14px;
+                        height: 45px;
+                        line-height: 45px;
+                        padding: 0 30px;
+                    }
+
+                    .mobile_icon {
+                        display: block;
+                        i {
+                            font-size: 24px;
+                            height: 45px;
+                            line-height: 45px;
+                            width: 50px;
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 10px;
+                            margin-left: 30px;
+                            z-index: 100;
+                            transition: 0.3s ease-in-out;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 567px) {
+    .navbars {
+        padding: 5px 10px;
+        top: -5px;
+        height: 80px;
+
+        .container-fluid .nav_row {
+            .nav_col1 .logo a img {
+                transform: scale(0.9);
+            }
+            .nav_col3 .items {
+                .nav_button button {
+                    font-size: 12px;
+                    height: 35px;
+                    line-height: 35px;
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                }
+                .mobile_icon i {
+                    font-size: 24px;
+                    height: 35px;
+                    line-height: 35px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

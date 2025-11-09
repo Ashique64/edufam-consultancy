@@ -1,0 +1,55 @@
+.wa-fab {
+    /* positioning */
+    position: fixed;
+    bottom: var(--wa-bottom, 20px);
+    right: var(--wa-right, 20px);
+    z-index: var(--wa-z, 9999);
+
+    /* size */
+    width: var(--wa-size, 56px);
+    height: var(--wa-size, 56px);
+
+    /* appearance */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    //   background: #25d366; /* WhatsApp green */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18), 0 6px 12px rgba(0, 0, 0, 0.12);
+
+    /* interaction */
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    will-change: transform;
+}
+
+.wa-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 8px 16px rgba(0, 0, 0, 0.16);
+    //   background: #22c35e; /* slightly darker on hover */
+}
+
+.wa-fab:active {
+    transform: translateY(0);
+}
+
+.wa-icon {
+    width: 60%;
+    height: 60%;
+    display: block;
+}
+
+/* High contrast mode consideration */
+@media (prefers-contrast: more) {
+    .wa-fab {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .wa-fab {
+        transition: none;
+    }
+}
