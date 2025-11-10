@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -60,9 +60,7 @@ const SuccessStories = () => {
     }, []);
 
     const renderStars = (rating) =>
-        [...Array(5)].map((_, i) => (
-            <FaStar key={i} className={i < rating ? "star filled" : "star"} />
-        ));
+        [...Array(5)].map((_, i) => <FaStar key={i} className={i < rating ? "star filled" : "star"} />);
 
     const openPDF = (pdfUrl) => {
         window.open(pdfUrl, "_blank");
@@ -70,14 +68,22 @@ const SuccessStories = () => {
 
     return (
         <div className="success-stories parallax-design" id="success-stories">
-            <div className="section-header" data-aos="fade-up">
-                <h2 className="hero-heading">
-                    <span className="title-text">Success Stories & Visa Approvals</span>
-                </h2>
-                <p>
-                    Real students, real success stories. See how we've helped students achieve their German
-                    study dreams with successful visa approvals.
-                </p>
+
+            <div className="row title-row">
+                <div className="col-12 title-col">
+                    {/* Title */}
+                    <h2 className="section-title">Student Success Stories</h2>
+
+                    {/* Decorative Divider */}
+                    <div className="divider">
+                        <span className="line"></span>
+                        <span className="icon">⚭</span>
+                        <span className="line"></span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="section-description">See how students achieved their study-in-Germany goals with our guidance.</p>
+                </div>
             </div>
 
             <div className="carousel-wrapper">
@@ -104,21 +110,11 @@ const SuccessStories = () => {
                 >
                     {successStories.map((story, index) => (
                         <SwiperSlide key={story.id}>
-                            <div
-                                className="story-card"
-                                data-aos="fade-up"
-                                data-aos-delay={100}
-                            >
+                            <div className="story-card" data-aos="fade-up" data-aos-delay={100}>
                                 <div className="card-inner">
                                     <div className="card-left">
-                                        <div
-                                            className="certificate-wrapper"
-                                            onClick={() => openPDF(story.certificatePDF)}
-                                        >
-                                            <img 
-                                                src={story.certificateImage} 
-                                                alt={`${story.studentName} certificate`} 
-                                            />
+                                        <div className="certificate-wrapper" onClick={() => openPDF(story.certificatePDF)}>
+                                            <img src={story.certificateImage} alt={`${story.studentName} certificate`} />
                                             <div className="image-overlay">
                                                 <FaExternalLinkAlt className="overlay-icon" />
                                                 <p>View Certificate</p>

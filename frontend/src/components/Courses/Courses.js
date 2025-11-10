@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
@@ -92,12 +92,19 @@ const Courses = () => {
             <div className="course-container">
                 <div className="row title-row">
                     <div className="col-12 title-col">
-                        <h2 className="hero-heading">
-                            <span className="title-text">Your Gateway to Studying in Germany</span>
-                        </h2>
-                        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1600">
-                            Unlock world-class education, endless career opportunities, and a brighter future — start your
-                            German journey today.
+                        {/* Title */}
+                        <h2 className="section-title">Programs We Offer</h2>
+
+                        {/* Decorative Divider */}
+                        <div className="divider">
+                            <span className="line"></span>
+                            <span className="icon">⚭</span>
+                            <span className="line"></span>
+                        </div>
+
+                        {/* Description */}
+                        <p className="section-description">
+                            A curated selection of courses to guide your academic journey.
                         </p>
                     </div>
                 </div>
@@ -118,11 +125,7 @@ const Courses = () => {
                                 onMouseLeave={() => setHoveredCard(null)}
                             >
                                 <div className="category-image-wrapper">
-                                    <img 
-                                        src={category.image} 
-                                        alt={category.title} 
-                                        className="category-image" 
-                                    />
+                                    <img src={category.image} alt={category.title} className="category-image" />
                                 </div>
 
                                 {/* Title */}

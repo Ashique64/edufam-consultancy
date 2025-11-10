@@ -24,7 +24,7 @@ const Contact = () => {
 
     useEffect(() => {
         setMounted(true);
-        
+
         AOS.init({
             duration: 1000,
             easing: "ease-out-cubic",
@@ -139,15 +139,22 @@ const Contact = () => {
         <div className="contact" id="contact">
             <div className="container contact-container">
                 {/* Header Section */}
-                <div className="row" data-aos="fade-up" data-aos-duration="1000">
-                    <div className="col-12 text-center mb-5">
-                        <h2 className="section-title">
-                            <span className="accent-line me-4"></span>
-                            Get In Touch
-                            <span className="accent-line ms-4"></span>
-                        </h2>
-                        <p className="section-subtitle">
-                            Ready to start your journey to Germany? Let&apos;s make your educational dreams come true together
+                <div className="row title-row">
+                    <div className="col-12 title-col">
+                        {/* Title */}
+                        <h2 className="section-title">Get In Touch</h2>
+
+                        {/* Decorative Divider */}
+                        <div className="divider">
+                            <span className="line"></span>
+                            <span className="icon">⚭</span>
+                            <span className="line"></span>
+                        </div>
+
+                        {/* Description */}
+                        <p className="section-description">
+                            Ready to start your journey to Germany? Let&apos;s make your educational dreams come true
+                            together
                         </p>
                     </div>
                 </div>
@@ -166,8 +173,8 @@ const Contact = () => {
                                 Contact Information
                             </h3>
                             <p className="info-description">
-                                Reach out to us through any of the following channels. We&apos;re here to help you every step of
-                                the way.
+                                Reach out to us through any of the following channels. We&apos;re here to help you every
+                                step of the way.
                             </p>
                             <div className="contact-cards">
                                 {contactInfo.map((info) => (

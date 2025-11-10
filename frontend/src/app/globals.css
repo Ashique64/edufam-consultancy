@@ -13,7 +13,7 @@
 :root {
     /* --primary-color: #031e76; */
     --primary-color: #0e83f8;
-    --primary-dark: #102e50;
+    --primary-dark: #3f51b5;
     --primary-light: #165eb0;
 
     --secondary-color: #ffffff;
@@ -24,6 +24,7 @@
     --text-secondary: #1515156f;
     --text-secondary-2: #d3d2d29e;
     --border-color: #e8ecef;
+    --border-color-2: #f4f4f4;
     --text-gradient: linear-gradient(135deg, #3b82f6, #10b981);
 
     /* --primary-font: "Poppins", sans-serif; */

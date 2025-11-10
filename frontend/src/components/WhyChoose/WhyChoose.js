@@ -1,15 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-    FaStar,
-    FaUsers,
-    FaGraduationCap,
-    FaHandshake,
-    FaGlobe,
-    FaAward,
-    FaHeadset,
-    FaChartLine,
-} from "react-icons/fa";
+import { FaStar, FaUsers, FaGraduationCap, FaHandshake, FaGlobe, FaAward, FaHeadset, FaChartLine } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./WhyChoose.scss";
@@ -97,7 +88,7 @@ const WhyChoose = () => {
 
     useEffect(() => {
         // Initialize AOS only on client side
-        if (typeof window !== 'undefined') {
+        if (typeof window !== "undefined") {
             AOS.init({
                 duration: 1200,
                 easing: "ease-out-cubic",
@@ -130,10 +121,18 @@ const WhyChoose = () => {
             <div className="container why-container">
                 <div className="row title-row">
                     <div className="col-12 title-col">
-                        <h2 className="section-title" data-aos="fade-up" data-aos-duration="1400">
-                            Why Choose EduFam
-                        </h2>
-                        <p className="section-subtitle" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+                        {/* Title */}
+                        <h2 className="section-title">Why Choose EduFam</h2>
+
+                        {/* Decorative Divider */}
+                        <div className="divider">
+                            <span className="line"></span>
+                            <span className="icon">⚭</span>
+                            <span className="line"></span>
+                        </div>
+
+                        {/* Description */}
+                        <p className="section-description">
                             Your trusted partner for German education with proven excellence and personalized care
                         </p>
                     </div>
