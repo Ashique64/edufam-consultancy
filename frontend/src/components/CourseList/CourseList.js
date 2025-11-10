@@ -240,12 +240,20 @@ const CourseList = () => {
                                                 <td className="duration-cell">{duration}</td>
                                                 <td className="actions-cell">
                                                     <div className="action-buttons">
-                                                        <Link
-                                                            href="/#contact"
-                                                            className="eligibility-btn text-decoration-none"
+                                                        <button
+                                                            className="eligibility-btn"
+                                                            onClick={() => {
+                                                                const phone = "919074506060";
+                                                                const text =
+                                                                    encodeURIComponent("Hi! I'd like to know more.");
+                                                                window.open(
+                                                                    `https://wa.me/${phone}?text=${text}`,
+                                                                    "_blank"
+                                                                );
+                                                            }}
                                                         >
-                                                            <span className="btn-text-full">Check Eligibility</span>
-                                                        </Link>
+                                                            Check Eligibility
+                                                        </button>
                                                     </div>
                                                 </td>
                                             </tr>

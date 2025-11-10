@@ -116,8 +116,7 @@
 
     .stats-section {
         padding: 50px 0;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        margin-top: -40px;
+        // margin-top: -40px;
         position: relative;
         z-index: 3;
 
@@ -133,24 +132,24 @@
                 padding: 2rem 1.2rem;
                 border-radius: 16px;
                 text-align: center;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-                transition: all 0.3s ease;
+                // box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                border: 1.5px solid var(--border-color-2);
+                transition: all 0.3s ease-in-out;
 
                 &:hover {
                     transform: translateY(-10px);
-                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
                 }
 
                 .stat-icon {
                     font-size: 2rem;
-                    color: var(--primary-color);
+                    color: var(--primary-dark);
                     margin-bottom: 0.8rem;
                 }
 
                 .stat-number {
                     font-size: 2.2rem;
-                    font-weight: 800;
-                    color: var(--primary-color);
+                    font-weight: 400;
+                    color: var(--primary-dark);
                     margin-bottom: 0.4rem;
                 }
 
@@ -220,15 +219,16 @@
 
                     h2 {
                         font-size: 2.6rem;
-                        font-weight: 500;
-                        color: var(--primary-color);
+                        font-weight: 400;
+                        color: var(--primary-dark);
                         margin-bottom: 0.8rem;
+                        text-transform: uppercase;
                     }
 
                     .header-line {
                         width: 70px;
                         height: 3px;
-                        background: var(--accent-color);
+                        background: var(--text-secondary-2);
                         border-radius: 2px;
                     }
                 }
@@ -237,7 +237,7 @@
                     .lead-text {
                         font-size: 1.2rem;
                         font-weight: 300;
-                        color: var(--accent-color);
+                        color: var(--primary-dark);
                         font-family: var(--secondary-font);
                         margin-bottom: 1rem;
                         line-height: 1.5;
@@ -355,7 +355,7 @@
                 h2 {
                     font-size: 2.6rem;
                     font-weight: 500;
-                    color: var(--primary-color);
+                    color: var(--primary-dark);
                     margin-bottom: 0.8rem;
                 }
 
@@ -370,7 +370,7 @@
                 .header-line {
                     width: 80px;
                     height: 3px;
-                    background: var(--accent-color);
+                    background: var(--text-secondary-2);
                     margin: 0 auto;
                     border-radius: 2px;
                 }
@@ -389,11 +389,11 @@
                     border-radius: 12px;
                     text-align: center;
                     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-                    border-top: 3px solid var(--accent-color);
+                    border-top: 3px solid var(--primary-dark);
 
                     .value-icon {
                         font-size: 2rem;
-                        color: var(--primary-color);
+                        color: var(--primary-dark);
                         margin-bottom: 1rem;
                     }
 
@@ -401,7 +401,7 @@
                         font-size: 1.2rem;
                         font-weight: 500;
                         margin-bottom: 0.8rem;
-                        color: var(--primary-color);
+                        color: var(--primary-dark);
                     }
 
                     p {
@@ -456,6 +456,7 @@
                     font-size: 1rem;
                     font-weight: 400;
                     border-radius: 40px;
+                    border-color: transparent;
                     cursor: pointer;
                     transition: all 0.3s ease;
                     text-transform: uppercase;
