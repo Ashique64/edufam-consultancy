@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
@@ -117,9 +117,10 @@ const Hero = () => {
             <div className="hero-container container">
                 <div className="hero-content">
                     <div className="content-items">
-                        <h1 data-aos="fade-up" data-aos-delay="300">
-                            Your German Study Journey Starts Here
+                        <h1>
+                            Your <span className="highlight">German Study</span> Journey Starts Here
                         </h1>
+
                         <p data-aos="fade-up" data-aos-delay="500">
                             Navigate the path to top German universities with confidence. Complete end-to-end support from
                             expert counselors who make your dreams achievable.
@@ -136,11 +137,7 @@ const Hero = () => {
                         <div className="stats-container" data-aos="fade-up" data-aos-delay="900">
                             <div className="stat">
                                 <div className="items">
-                                    <span 
-                                        className="counter" 
-                                        data-target="500" 
-                                        ref={(el) => (countersRef.current[0] = el)}
-                                    >
+                                    <span className="counter" data-target="500" ref={(el) => (countersRef.current[0] = el)}>
                                         0
                                     </span>
                                     <span>+</span>
@@ -149,11 +146,7 @@ const Hero = () => {
                             </div>
                             <div className="stat">
                                 <div className="items">
-                                    <span 
-                                        className="counter" 
-                                        data-target="100" 
-                                        ref={(el) => (countersRef.current[1] = el)}
-                                    >
+                                    <span className="counter" data-target="100" ref={(el) => (countersRef.current[1] = el)}>
                                         0
                                     </span>
                                     <span>%</span>
@@ -162,11 +155,7 @@ const Hero = () => {
                             </div>
                             <div className="stat">
                                 <div className="items">
-                                    <span 
-                                        className="counter" 
-                                        data-target="3" 
-                                        ref={(el) => (countersRef.current[2] = el)}
-                                    >
+                                    <span className="counter" data-target="3" ref={(el) => (countersRef.current[2] = el)}>
                                         0
                                     </span>
                                     <span>+</span>

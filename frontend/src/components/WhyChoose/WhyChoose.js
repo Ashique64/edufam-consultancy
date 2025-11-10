@@ -10,7 +10,7 @@ const WhyChoose = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
     const PRIMARY = "var(--secondary-color)";
-    const ICON_GRADIENT = "var(--primary-color";
+    const ICON_GRADIENT = "var(--primary-dark";
 
     const reasons = [
         {
@@ -53,28 +53,28 @@ const WhyChoose = () => {
     ];
 
     const achievements = [
-        { icon: <FaAward />, number: "500+", label: "Success Stories", color: "#031e76" },
-        { icon: <FaUsers />, number: "1000+", label: "Happy Students", color: "#031e76" },
-        { icon: <FaGraduationCap />, number: "50+", label: "University Partners", color: "#031e76" },
-        { icon: <FaGlobe />, number: "15+", label: "German Cities", color: "#031e76" },
+        { icon: <FaAward />, number: "500+", label: "Success Stories", color: "#3f51b5" },
+        { icon: <FaUsers />, number: "1000+", label: "Happy Students", color: "#3f51b5" },
+        { icon: <FaGraduationCap />, number: "50+", label: "University Partners", color: "#3f51b5" },
+        { icon: <FaGlobe />, number: "15+", label: "German Cities", color: "#3f51b5" },
     ];
 
     const testimonials = [
         {
-            name: "Priya Sharma",
-            course: "Computer Science, TU Munich",
+            name: "Muhammadu Farooqu",
+            course: "Justus Liebig University Giessen",
             text: "EduFam made my dream of studying in Germany a reality. Their guidance was invaluable throughout the process.",
             rating: 5,
         },
         {
-            name: "Rahul Kumar",
-            course: "Mechanical Engineering, RWTH Aachen",
+            name: "Shibil Muhammed",
+            course: "Justus Liebig University Giessen",
             text: "Outstanding support from application to visa approval. Highly recommend their services to everyone.",
             rating: 5,
         },
         {
-            name: "Anjali Nair",
-            course: "Business Administration, Frankfurt University",
+            name: "Hadiya",
+            course: "Justus Liebig University Giessen",
             text: "Professional, reliable, and genuinely caring. They supported me every step of the way to Germany.",
             rating: 5,
         },

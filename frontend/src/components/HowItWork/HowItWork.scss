@@ -23,7 +23,7 @@
 
                 .section-title {
                     font-size: 2.8rem;
-                    font-weight: 700;
+                    font-weight: 300;
                     color: var(--primary-dark);
                     font-family: var(--primary-font);
                     text-align: center;
@@ -80,21 +80,6 @@
                 }
             }
         }
-
-        .section-subtitle {
-            color: #7f8c8d;
-            font-family: var(--para-font);
-            text-align: center;
-            font-size: 16px;
-            font-weight: 400;
-            max-width: 600px;
-            line-height: 1.6;
-
-            @media (max-width: 768px) {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-        }
     }
 
     .step-grid {
@@ -136,7 +121,7 @@
                 width: 28px;
                 height: 28px;
                 border-radius: 50%;
-                background: var(--primary-color);
+                background: var(--primary-dark);
                 color: var(--secondary-color);
                 font-weight: 800;
                 font-size: 12px;
@@ -144,7 +129,7 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px solid var(--primary-color);
+                border: 1px solid var(--primary-dark);
             }
 
             .grid-icon {
@@ -164,9 +149,9 @@
             .grid-title {
                 grid-column: 2;
                 grid-row: 1;
-                color: var(--primary-color);
+                color: var(--primary-dark);
                 font-family: var(--primary-font);
-                font-weight: 700;
+                font-weight: 300;
                 font-size: 16px;
                 line-height: 1.25;
             }
@@ -204,7 +189,7 @@
                 /* Keep the badge visible against the new background */
                 .grid-badge {
                     background: var(--secondary-color);
-                    color: var(--primary-color);
+                    color: var(--primary-dark);
                     border-color: var(--secondary-color);
                 }
             }
@@ -214,10 +199,10 @@
     /* Spotlight (right) */
     .spotlight {
         background: #ffffff;
-        border: 1px solid rgba(232, 236, 239, 0.8);
+        border: 1px solid var(--border-color-2);
         border-radius: 20px;
         padding: 24px;
-        box-shadow: 0 8px 30px rgba(36, 80, 123, 0.12);
+        // box-shadow: 0 8px 30px rgba(36, 80, 123, 0.12);
 
         .spotlight-header {
             display: flex;
@@ -247,7 +232,7 @@
             }
 
             .spotlight-title {
-                color: var(--primary-color);
+                color: var(--primary-dark);
                 font-size: 20px;
                 font-weight: 700;
                 font-family: var(--secondary-font);
@@ -266,7 +251,7 @@
 
         .spotlight-deliverables {
             h4 {
-                color: var(--primary-color);
+                color: var(--primary-dark);
                 font-family: var(--secondary-font);
                 font-size: 15px;
                 font-weight: 700;
@@ -311,7 +296,7 @@
                 transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 
                 &.primary {
-                    background: var(--primary-color);
+                    background: var(--primary-dark);
                     color: var(--secondary-color);
                     border: none;
                     box-shadow: 0 8px 18px rgba(36, 80, 123, 0.25);
@@ -371,7 +356,7 @@
                 }
 
                 .mobile-title {
-                    color: var(--primary-color);
+                    color: var(--primary-dark);
                     font-size: 18px;
                     font-weight: 700;
                     margin: 0;
