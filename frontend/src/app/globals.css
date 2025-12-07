@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
     margin: 0;
@@ -13,7 +13,8 @@
 :root {
     /* --primary-color: #031e76; */
     --primary-color: #0e83f8;
-    --primary-dark: #3f51b5;
+    /* --primary-dark: #3f51b5; */
+    --primary-dark: #0e1d71;
     --primary-light: #165eb0;
 
     --secondary-color: #ffffff;
