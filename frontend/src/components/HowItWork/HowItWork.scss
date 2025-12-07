@@ -1,9 +1,9 @@
 .how-it-works-horizontal {
     background: var(--secondary-color);
-    min-height: 80vh;
+    min-height: calc(fit-content + 40px);
     position: relative;
     overflow: hidden;
-    padding: 70px 0;
+    padding: 100px 0;
 
     .how-container {
         position: relative;
@@ -21,19 +21,38 @@
                 align-items: center;
                 position: relative;
 
-                .section-title {
-                    font-size: 2.8rem;
-                    font-weight: 300;
-                    color: var(--primary-dark);
-                    font-family: var(--primary-font);
+                .section-header {
                     text-align: center;
-                    margin-bottom: 1rem;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
+                    max-width: 650px;
+                    margin: 0 auto 20px;
 
-                    @media (max-width: 768px) {
-                        font-size: 2.2rem;
-                        margin-bottom: 0.7rem;
+                    .badge {
+                        display: inline-block;
+                        padding: 8px 16px;
+                        background: rgba(14, 131, 248, 0.08);
+                        color: var(--primary-color);
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        border-radius: 30px;
+                        margin-bottom: 1.5rem;
+                        font-family: var(--primary-font-2);
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                    }
+
+                    .section-title {
+                        font-family: var(--primary-font);
+                        font-size: 3rem;
+                        color: var(--primary-dark);
+                        margin-bottom: 0;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        word-spacing: 10px;
+                        text-transform: uppercase;
+
+                        @media (max-width: 768px) {
+                            font-size: 2.5rem;
+                        }
                     }
                 }
 
@@ -67,11 +86,11 @@
 
                 .section-description {
                     color: var(--text-secondary);
-                    font-size: 1rem;
+                    font-size: 1.15rem;
                     font-family: var(--para-font);
                     text-align: center;
                     max-width: 650px;
-                    line-height: 1.6;
+                    line-height: 1.7;
                     margin: 0;
 
                     @media (max-width: 768px) {

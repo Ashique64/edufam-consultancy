@@ -138,11 +138,12 @@ const Contact = () => {
     return (
         <div className="contact" id="contact">
             <div className="container contact-container">
-                {/* Header Section */}
                 <div className="row title-row">
                     <div className="col-12 title-col">
-                        {/* Title */}
-                        <h2 className="section-title">Get In Touch</h2>
+                        <div className="section-header">
+                            <span className="badge">Let's Connect</span>
+                            <h2 className="section-title">Get In Touch</h2>
+                        </div>
 
                         {/* Decorative Divider */}
                         <div className="divider">

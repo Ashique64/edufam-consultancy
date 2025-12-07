@@ -104,7 +104,10 @@ const HowItWork = () => {
                 <div className="row title-row">
                     <div className="col-12 title-col">
                         {/* Title */}
-                        <h2 className="section-title">How Edufam Works</h2>
+                        <div className="section-header">
+                            <span className="badge">Process Flow</span>
+                            <h2 className="section-title">How Edufam Works</h2>
+                        </div>
 
                         {/* Decorative Divider */}
                         <div className="divider">

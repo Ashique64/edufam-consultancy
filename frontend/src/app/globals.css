@@ -17,10 +17,11 @@
     --primary-dark: #0e1d71;
     --primary-light: #165eb0;
 
-    --secondary-color: #ffffff;
+    --secondary-color: #f8f9fa;
     --secondary-light: #fafbfc;
     /* --accent-color: #FFD84D; */
     --accent-color: #12055e;
+    --accent-dark: #ffd269;
     /* --text-secondary: #7f8c8d; */
     --text-secondary: #1515156f;
     --text-secondary-2: #d3d2d29e;

@@ -1,4 +1,5 @@
 $primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
 $primary-light: var(--primary-light);
 $primary-dark: var(--primary-dark);
 $accent-color: var(--accent-color);
@@ -40,11 +41,10 @@ $para-font: var(--para-font);
 .hero-section {
     position: relative;
     padding: 100px 5%;
-    min-height: 90vh;
+    min-height: calc(fit-content + 40px);
     display: flex;
     align-items: center;
-    // background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    background: #f8f9fa;
+    background: $secondary-color;
     overflow: hidden;
 
     // Abstract Background Shapes

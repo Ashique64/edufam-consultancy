@@ -9,9 +9,10 @@ import Courses from "@/components/Courses/Courses";
 import SuccessStories from "@/components/SuccessStories/SuccessStories";
 import HowItWork from "@/components/HowItWork/HowItWork";
 import WhyChoose from "@/components/WhyChoose/WhyChoose";
+import WhyChoose2 from "@/components/WhyChoose2/WhyChoose2";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
+import SuccessStories2 from "@/components/SuccessStories2/SuccessStories2";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -40,12 +41,13 @@ export default function Home() {
                 <Hero2 />
                 {/* <Courses /> */}
                 <Course2 />
-                <SuccessStories />
+                {/* <SuccessStories /> */}
+                <SuccessStories2 />
                 <HowItWork />
-                <WhyChoose />
+                {/* <WhyChoose /> */}
+                <WhyChoose2 />
                 <Contact />
                 <Footer />
-                <WhatsAppButton />
             </div>
         </>
     );
