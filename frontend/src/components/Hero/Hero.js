@@ -89,7 +89,8 @@ const Hero = () => {
                             minWidth: 200.0,
                             scale: 1.0,
                             scaleMobile: 1.0,
-                            color: 0x0e83f8,
+                            // color: 0x0e83f8,
+                            color: 0x3288,
                             shininess: 40,
                             waveHeight: 35,
                             waveSpeed: 0.6,
@@ -137,7 +138,7 @@ const Hero = () => {
                         <div className="stats-container" data-aos="fade-up" data-aos-delay="900">
                             <div className="stat">
                                 <div className="items">
-                                    <span className="counter" data-target="500" ref={(el) => (countersRef.current[0] = el)}>
+                                    <span className="counter" data-target="200" ref={(el) => (countersRef.current[0] = el)}>
                                         0
                                     </span>
                                     <span>+</span>

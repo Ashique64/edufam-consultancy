@@ -194,7 +194,7 @@
         @media (min-width: 992px) {
             .step-grid-card:hover,
             .step-grid-card.active {
-                background: var(--primary-color);
+                background: var(--accent-color);
                 color: var(--secondary-color);
                 border-color: rgba(255, 255, 255, 0.35);
 
@@ -348,6 +348,7 @@
         .mobile-step {
             // background: var(--primary-color);
             background: transparent;
+            background: transparent;
             // border: 1px solid rgba(238, 10, 10, 0.1);
             border: 1px solid var(--primary-color);
             border-radius: 20px;
@@ -435,7 +436,7 @@
             }
 
             &.active {
-                background: var(--primary-color);
+                background: var(--accent-color);
                 border-color: rgba(255, 255, 255, 0.2);
 
                 .mobile-title {
@@ -444,7 +445,7 @@
             }
 
             &:hover {
-                background: var(--primary-color);
+                background: var(--accent-color);
 
                 .mobile-title {
                     color: white;

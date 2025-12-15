@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import "./Courses.scss";
 
 const Courses = () => {
@@ -18,7 +17,7 @@ const Courses = () => {
             description: "Advanced technical programs in various engineering disciplines",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-1.jpg", // Added leading slash
+            image: "/Images/course/img-1.jpg",
         },
         {
             id: 2,
@@ -26,7 +25,7 @@ const Courses = () => {
             description: "Comprehensive business and management programs",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-2.jpg", // Added leading slash
+            image: "/Images/course/img-2.jpg",
         },
         {
             id: 3,
@@ -34,7 +33,7 @@ const Courses = () => {
             description: "Scientific research and analytical programs",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-3.jpg", // Added leading slash
+            image: "/Images/course/img-3.jpg",
         },
         {
             id: 4,
@@ -42,7 +41,7 @@ const Courses = () => {
             description: "Medical and healthcare professional programs",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-4.jpg", // Added leading slash
+            image: "/Images/course/img-4.jpg",
         },
         {
             id: 5,
@@ -50,7 +49,7 @@ const Courses = () => {
             description: "Creative and architectural design programs",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-5.jpg", // Added leading slash
+            image: "/Images/course/img-5.jpg",
         },
         {
             id: 6,
@@ -58,7 +57,7 @@ const Courses = () => {
             description: "Cutting-edge technology and AI programs",
             bgGradient: "linear-gradient(135deg, #031e76 0%, #0a3ba3 50%, #1c5cff 100%)",
             border: "1px solid #e8ecef",
-            image: "/Images/course/img-6.jpg", // Added leading slash
+            image: "/Images/course/img-6.jpg",
         },
     ];
 
@@ -68,7 +67,7 @@ const Courses = () => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1200,
+            duration: 1000,
             easing: "ease-out-cubic",
             once: false,
             mirror: true,

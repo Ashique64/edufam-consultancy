@@ -143,13 +143,13 @@ const CourseList = () => {
             once: false,
             mirror: true,
             offset: 100,
-            delay: 0,
         });
         AOS.refresh();
         return () => AOS.refresh();
     }, [categoryTitle]);
 
     const handleBackClick = () => router.back();
+
     const handleConsultationClick = () => {
         const phone = "919074506060";
         const text = encodeURIComponent("Hi! I'd like to know more.");
@@ -168,21 +168,17 @@ const CourseList = () => {
     return (
         <div className="course-list" id="course-list">
             <div className="gradient-overlay"></div>
-            <button className="back-button" onClick={handleBackClick} data-aos="fade-right" data-aos-duration="800">
+
+            <button className="back-button" onClick={handleBackClick} data-aos="fade-right">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M19 12H5M12 19L5 12L12 5"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" />
                 </svg>
                 <span className="back-text">Back to Categories</span>
             </button>
+
             <div className="container course-list-container p-0">
                 {/* Header Section */}
-                <div className="category-header-section" data-aos="fade-up" data-aos-duration="1000">
+                <div className="category-header-section" data-aos="fade-up">
                     <div className="category-image-container">
                         <img src={categoryData.image} alt={categoryTitle} className="category-hero-image" />
                         <div className="category-overlay">
@@ -193,84 +189,61 @@ const CourseList = () => {
                         </div>
                     </div>
                 </div>
-                {/* Responsive Table Section */}
+
+                {/* SIMPLE TABLE WITHOUT LEVEL & DURATION */}
                 <div className="courses-responsive-table">
                     <div className="courses-table-section">
-                        <div className="section-header" data-aos="fade-up" data-aos-delay="200">
+                        <div className="section-header" data-aos="fade-up">
                             <h2 className="courses-table-title">Available Programs</h2>
                             <p className="courses-table-subtitle">
-                                Explore our comprehensive range of programs in {decodeURIComponent(categoryTitle)}
+                                Explore programs in {decodeURIComponent(categoryTitle)}
                             </p>
                         </div>
+
                         <div className="table-wrapper">
-                            <table className="course-table" data-aos="fade-up" data-aos-delay="300">
+                            <table className="course-table" data-aos="fade-up">
                                 <thead>
                                     <tr>
                                         <th className="serial-col">#</th>
                                         <th className="program-col">Program Name</th>
-                                        <th className="level-col">Level</th>
-                                        <th className="duration-col">Duration</th>
                                         <th className="actions-col">Actions</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-                                    {courses.map((course, idx) => {
-                                        const lower = course.toLowerCase();
-                                        let level = "Program";
-                                        let duration = "Varies";
-                                        if (lower.includes("bachelor")) {
-                                            level = "Bachelor";
-                                            duration = "3-4 Years";
-                                        } else if (lower.includes("master")) {
-                                            level = "Master";
-                                            duration = "1-2 Years";
-                                        }
-                                        return (
-                                            <tr
-                                                key={idx}
-                                                data-aos="fade-up"
-                                                data-aos-delay={idx * 50}
-                                                data-aos-duration="600"
-                                            >
-                                                <td className="serial-cell">{idx + 1}</td>
-                                                <td className="course-name">{course}</td>
-                                                <td className="level-cell">
-                                                    <span className={`level-badge ${level.toLowerCase()}`}>{level}</span>
-                                                </td>
-                                                <td className="duration-cell">{duration}</td>
-                                                <td className="actions-cell">
-                                                    <div className="action-buttons">
-                                                        <button
-                                                            className="eligibility-btn"
-                                                            onClick={() => {
-                                                                const phone = "919074506060";
-                                                                const text =
-                                                                    encodeURIComponent("Hi! I'd like to know more.");
-                                                                window.open(
-                                                                    `https://wa.me/${phone}?text=${text}`,
-                                                                    "_blank"
-                                                                );
-                                                            }}
-                                                        >
-                                                            Check Eligibility
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        );
-                                    })}
+                                    {courses.map((course, idx) => (
+                                        <tr key={idx} data-aos="fade-up">
+                                            <td className="serial-cell">{idx + 1}</td>
+
+                                            <td className="course-name">{course}</td>
+
+                                            <td className="actions-cell">
+                                                <div className="action-buttons">
+                                                    <button
+                                                        className="eligibility-btn"
+                                                        onClick={() => {
+                                                            const phone = "919074506060";
+                                                            const text = encodeURIComponent("Hi! I'd like to know more.");
+                                                            window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+                                                        }}
+                                                    >
+                                                        Check Eligibility
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
                 <div className="cta-container">
-                    <div className="cta-section" data-aos="fade-up" data-aos-delay="400">
+                    <div className="cta-section" data-aos="fade-up">
                         <div className="cta-content">
                             <h3 className="cta-title">Ready to Start Your Journey?</h3>
-                            <p className="cta-description">
-                                Get personalized guidance and start your application process today
-                            </p>
+                            <p className="cta-description">Get personalized guidance and start your application today.</p>
                             <div className="cta-buttons">
                                 <button className="cta-primary-btn" onClick={handleConsultationClick}>
                                     Get Consultation

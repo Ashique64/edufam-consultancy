@@ -13,6 +13,7 @@ import WhyChoose2 from "@/components/WhyChoose2/WhyChoose2";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import SuccessStories2 from "@/components/SuccessStories2/SuccessStories2";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -37,15 +38,15 @@ export default function Home() {
             {loading && <Preloader />}
             <div style={{ opacity: loading ? 0 : 1, transition: "opacity 0.5s ease-in-out" }}>
                 {/* <Navbar /> */}
-                {/* <Hero /> */}
-                <Hero2 />
-                {/* <Courses /> */}
-                <Course2 />
-                {/* <SuccessStories /> */}
-                <SuccessStories2 />
+                <Hero />
+                {/* <Hero2 /> */}
+                <Courses />
+                {/* <Course2 /> */}
+                <SuccessStories />
+                {/* <SuccessStories2 /> */}
                 <HowItWork />
-                {/* <WhyChoose /> */}
-                <WhyChoose2 />
+                <WhyChoose />
+                {/* <WhyChoose2 /> */}
                 <Contact />
                 <Footer />
             </div>

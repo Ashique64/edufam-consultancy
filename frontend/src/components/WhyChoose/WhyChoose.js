@@ -20,7 +20,7 @@ const WhyChoose = () => {
             icon: <FaUsers />,
             color: PRIMARY,
             bgGradient: ICON_GRADIENT,
-            stats: { number: "500+", label: "Students Guided" },
+            stats: { number: "200+", label: "Students Guided" },
         },
         {
             id: 2,
@@ -53,8 +53,8 @@ const WhyChoose = () => {
     ];
 
     const achievements = [
-        { icon: <FaAward />, number: "500+", label: "Success Stories", color: "#3f51b5" },
-        { icon: <FaUsers />, number: "1000+", label: "Happy Students", color: "#3f51b5" },
+        { icon: <FaAward />, number: "200+", label: "Success Stories", color: "#3f51b5" },
+        { icon: <FaUsers />, number: "500+", label: "Happy Students", color: "#3f51b5" },
         { icon: <FaGraduationCap />, number: "50+", label: "University Partners", color: "#3f51b5" },
         { icon: <FaGlobe />, number: "15+", label: "German Cities", color: "#3f51b5" },
     ];
