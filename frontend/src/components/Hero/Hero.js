@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaUserGraduate, FaCheckCircle, FaBriefcase } from "react-icons/fa";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -126,7 +127,7 @@ const Hero = () => {
                             Navigate the path to top German universities with confidence. Complete end-to-end support from
                             expert counselors who make your dreams achievable.
                         </p>
-                        <div className="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                        <div className="hero-buttons" data-aos="fade-up" data-aos-delay="600">
                             <button className="btn btn-1" onClick={handleConsultationClick}>
                                 Consultation
                             </button>
@@ -135,33 +136,60 @@ const Hero = () => {
                             </Link>
                         </div>
 
-                        <div className="stats-container" data-aos="fade-up" data-aos-delay="900">
+                        <div className="stats-container" data-aos="fade-up" data-aos-delay="700">
                             <div className="stat">
-                                <div className="items">
-                                    <span className="counter" data-target="200" ref={(el) => (countersRef.current[0] = el)}>
-                                        0
-                                    </span>
-                                    <span>+</span>
+                                <div className="stat-icon">
+                                    <FaUserGraduate />
                                 </div>
-                                <p>Students Helped</p>
+                                <div className="stat-content">
+                                    <div className="items">
+                                        <span
+                                            className="counter"
+                                            data-target="200"
+                                            ref={(el) => (countersRef.current[0] = el)}
+                                        >
+                                            0
+                                        </span>
+                                        <span>+</span>
+                                    </div>
+                                    <p>Students Helped</p>
+                                </div>
                             </div>
                             <div className="stat">
-                                <div className="items">
-                                    <span className="counter" data-target="100" ref={(el) => (countersRef.current[1] = el)}>
-                                        0
-                                    </span>
-                                    <span>%</span>
+                                <div className="stat-icon">
+                                    <FaCheckCircle />
                                 </div>
-                                <p>Success Rate</p>
+                                <div className="stat-content">
+                                    <div className="items">
+                                        <span
+                                            className="counter"
+                                            data-target="100"
+                                            ref={(el) => (countersRef.current[1] = el)}
+                                        >
+                                            0
+                                        </span>
+                                        <span>%</span>
+                                    </div>
+                                    <p>Success Rate</p>
+                                </div>
                             </div>
                             <div className="stat">
-                                <div className="items">
-                                    <span className="counter" data-target="3" ref={(el) => (countersRef.current[2] = el)}>
-                                        0
-                                    </span>
-                                    <span>+</span>
+                                <div className="stat-icon">
+                                    <FaBriefcase />
                                 </div>
-                                <p>Years Experience</p>
+                                <div className="stat-content">
+                                    <div className="items">
+                                        <span
+                                            className="counter"
+                                            data-target="3"
+                                            ref={(el) => (countersRef.current[2] = el)}
+                                        >
+                                            0
+                                        </span>
+                                        <span>+</span>
+                                    </div>
+                                    <p>Years Experience</p>
+                                </div>
                             </div>
                         </div>
                     </div>
