@@ -5,8 +5,8 @@
     overflow: hidden;
 
     .title-row {
-        overflow: hidden;
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
+        position: relative;
 
         .title-col {
             display: flex;
@@ -15,15 +15,51 @@
             align-items: center;
             position: relative;
 
+            .badge-container {
+                margin-bottom: 1rem;
+
+                .badge-text {
+                    background: rgba(14, 131, 248, 0.1);
+                    color: var(--primary-color);
+                    padding: 8px 20px;
+                    border-radius: 50px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    font-family: var(--secondary-font);
+                    border: 1px solid rgba(14, 131, 248, 0.2);
+                    display: inline-block;
+                }
+            }
+
             .section-title {
-                font-size: 2.8rem;
-                font-weight: 300;
+                font-size: 3.2rem;
+                font-weight: 500;
                 color: var(--primary-dark);
                 font-family: var(--primary-font);
                 text-align: center;
                 margin-bottom: 1rem;
-                letter-spacing: 1px;
+                letter-spacing: -1px;
+                line-height: 1.2;
                 text-transform: uppercase;
+
+                .highlight {
+                    color: var(--primary-color);
+                    position: relative;
+                    display: inline-block;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        width: 100%;
+                        height: 8px;
+                        background: rgba(14, 131, 248, 0.15);
+                        z-index: -1;
+                    }
+                }
 
                 @media (max-width: 768px) {
                     font-size: 2.2rem;
@@ -64,12 +100,13 @@
                 font-size: 1rem;
                 font-family: var(--para-font);
                 text-align: center;
-                max-width: 650px;
-                line-height: 1.6;
+                max-width: 600px;
+                line-height: 1.8;
                 margin: 0;
+                opacity: 0.8;
 
                 @media (max-width: 768px) {
-                    font-size: 0.8rem;
+                    font-size: 0.95rem;
                 }
             }
         }
@@ -347,16 +384,17 @@
     .success-stories.parallax-design {
         padding: 10px 0;
 
-        .section-header {
-            .hero-heading {
-                width: 100%;
-                padding: 0;
-                .title-text {
-                    font-size: 2.2rem;
-                    &::before,
-                    &::after {
-                        display: none;
-                    }
+        .title-row {
+            margin-bottom: 2.5rem;
+
+            .title-col {
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .section-description {
+                    font-size: 0.85rem;
+                    max-width: 95%;
                 }
             }
         }
@@ -506,13 +544,13 @@
     .success-stories.parallax-design {
         padding: 40px 0;
 
-        .section-header {
-            .hero-heading {
-                .title-text {
-                    &::before,
-                    &::after {
-                        display: none;
-                    }
+        .title-row {
+            .title-col {
+                .section-title {
+                    font-size: 2.4rem;
+                }
+                .section-description {
+                    font-size: 0.95rem;
                 }
             }
         }
@@ -669,7 +707,6 @@
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
     .success-stories.parallax-design {
-
         .carousel-wrapper {
             .story-card {
                 .card-inner {

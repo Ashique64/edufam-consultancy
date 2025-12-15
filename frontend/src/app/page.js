@@ -37,7 +37,7 @@ export default function Home() {
         <>
             {loading && <Preloader />}
             <div style={{ opacity: loading ? 0 : 1, transition: "opacity 0.5s ease-in-out" }}>
-                {/* <Navbar /> */}
+                <Navbar />
                 <Hero />
                 {/* <Hero2 /> */}
                 <Courses />

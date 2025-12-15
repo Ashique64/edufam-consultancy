@@ -121,18 +121,23 @@ const WhyChoose = () => {
             <div className="container why-container">
                 <div className="row title-row">
                     <div className="col-12 title-col">
+                        <div className="badge-container" data-aos="fade-up">
+                            <span className="badge-text">Why Us</span>
+                        </div>
                         {/* Title */}
-                        <h2 className="section-title">Why Choose EduFam</h2>
+                        <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+                            Why Choose <span className="highlight">EduFam</span>
+                        </h2>
 
                         {/* Decorative Divider */}
-                        <div className="divider">
+                        <div className="divider" data-aos="fade-up" data-aos-delay="150">
                             <span className="line"></span>
                             <span className="icon">⚭</span>
                             <span className="line"></span>
                         </div>
 
                         {/* Description */}
-                        <p className="section-description">
+                        <p className="section-description" data-aos="fade-up" data-aos-delay="200">
                             Your trusted partner for German education with proven excellence and personalized care
                         </p>
                     </div>

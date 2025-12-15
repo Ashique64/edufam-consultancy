@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/navigation";
+import { FaArrowRight } from "react-icons/fa";
 import "./Courses.scss";
 
 const Courses = () => {
@@ -91,18 +92,23 @@ const Courses = () => {
             <div className="course-container">
                 <div className="row title-row">
                     <div className="col-12 title-col">
+                        <div className="badge-container" data-aos="fade-up">
+                            <span className="badge-text">Our Programs</span>
+                        </div>
                         {/* Title */}
-                        <h2 className="section-title">Programs We Offer</h2>
+                        <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+                            Explore Our Top <span className="highlight">Courses</span>
+                        </h2>
 
                         {/* Decorative Divider */}
-                        <div className="divider">
+                        <div className="divider" data-aos="fade-up" data-aos-delay="150">
                             <span className="line"></span>
                             <span className="icon">⚭</span>
                             <span className="line"></span>
                         </div>
 
                         {/* Description */}
-                        <p className="section-description">
+                        <p className="section-description" data-aos="fade-up" data-aos-delay="200">
                             A curated selection of courses to guide your academic journey.
                         </p>
                     </div>
@@ -115,38 +121,32 @@ const Courses = () => {
                             className="col-lg-4 col-md-6 col-sm-6 mb-4"
                             data-aos="fade-up"
                             data-aos-delay={index * 150}
-                            data-aos-duration="1400"
-                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000"
                         >
                             <div
                                 className="category-card h-100"
                                 onMouseEnter={() => setHoveredCard(category.id)}
                                 onMouseLeave={() => setHoveredCard(null)}
+                                onClick={() => handleCategoryClick(category.title)}
                             >
                                 <div className="category-image-wrapper">
                                     <img src={category.image} alt={category.title} className="category-image" />
+                                    <div className="overlay"></div>
                                 </div>
 
-                                {/* Title */}
-                                <div className="category-header">
+                                <div className="category-content">
+                                    {/* Title */}
                                     <h3 className="category-title">{category.title}</h3>
-                                </div>
 
-                                {/* Description only */}
-                                <p className="category-description">{category.description}</p>
+                                    {/* Description */}
+                                    <p className="category-description">{category.description}</p>
 
-                                {/* Footer with only button */}
-                                <div className="category-footer">
-                                    <button
-                                        onClick={() => handleCategoryClick(category.title)}
-                                        className="category-btn"
-                                        style={{
-                                            background: category.bgGradient,
-                                            border: "none",
-                                        }}
-                                    >
-                                        Explore Programs
-                                    </button>
+                                    {/* Footer with arrow link */}
+                                    <div className="category-footer">
+                                        <span className="learn-more">
+                                            Learn More <FaArrowRight className="ms-2 arrow-icon" />
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

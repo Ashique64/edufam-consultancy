@@ -104,20 +104,23 @@ const HowItWork = () => {
                 <div className="row title-row">
                     <div className="col-12 title-col">
                         {/* Title */}
-                        <div className="section-header">
-                            <span className="badge">Process Flow</span>
-                            <h2 className="section-title">How Edufam Works</h2>
+                        <div className="badge-container" data-aos="fade-up">
+                            <span className="badge-text">Process Flow</span>
                         </div>
+                        {/* Title */}
+                        <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+                            How Edufam <span className="highlight">Works</span>
+                        </h2>
 
                         {/* Decorative Divider */}
-                        <div className="divider">
+                        <div className="divider" data-aos="fade-up" data-aos-delay="150">
                             <span className="line"></span>
                             <span className="icon">⚭</span>
                             <span className="line"></span>
                         </div>
 
                         {/* Description */}
-                        <p className="section-description">
+                        <p className="section-description" data-aos="fade-up" data-aos-delay="200">
                             Your seamless journey to studying in Germany - guided by those who've walked this path
                         </p>
                     </div>

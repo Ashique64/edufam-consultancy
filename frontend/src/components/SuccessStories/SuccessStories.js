@@ -68,21 +68,27 @@ const SuccessStories = () => {
 
     return (
         <div className="success-stories parallax-design" id="success-stories">
-
             <div className="row title-row">
                 <div className="col-12 title-col">
+                    <div className="badge-container" data-aos="fade-up">
+                        <span className="badge-text">Testimonials</span>
+                    </div>
                     {/* Title */}
-                    <h2 className="section-title">Student Success Stories</h2>
+                    <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+                        Student Success <span className="highlight">Stories</span>
+                    </h2>
 
                     {/* Decorative Divider */}
-                    <div className="divider">
+                    <div className="divider" data-aos="fade-up" data-aos-delay="150">
                         <span className="line"></span>
                         <span className="icon">⚭</span>
                         <span className="line"></span>
                     </div>
 
                     {/* Description */}
-                    <p className="section-description">See how students achieved their study-in-Germany goals with our guidance.</p>
+                    <p className="section-description" data-aos="fade-up" data-aos-delay="200">
+                        See how students achieved their study-in-Germany goals with our guidance.
+                    </p>
                 </div>
             </div>
 

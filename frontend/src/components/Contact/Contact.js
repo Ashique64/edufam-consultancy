@@ -140,20 +140,23 @@ const Contact = () => {
             <div className="container contact-container">
                 <div className="row title-row">
                     <div className="col-12 title-col">
-                        <div className="section-header">
-                            <span className="badge">Let's Connect</span>
-                            <h2 className="section-title">Get In Touch</h2>
+                        <div className="badge-container" data-aos="fade-up">
+                            <span className="badge-text">Let&apos;s Connect</span>
                         </div>
+                        {/* Title */}
+                        <h2 className="section-title" data-aos="fade-up" data-aos-delay="100">
+                            Get In <span className="highlight">Touch</span>
+                        </h2>
 
                         {/* Decorative Divider */}
-                        <div className="divider">
+                        <div className="divider" data-aos="fade-up" data-aos-delay="150">
                             <span className="line"></span>
                             <span className="icon">⚭</span>
                             <span className="line"></span>
                         </div>
 
                         {/* Description */}
-                        <p className="section-description">
+                        <p className="section-description" data-aos="fade-up" data-aos-delay="200">
                             Ready to start your journey to Germany? Let&apos;s make your educational dreams come true
                             together
                         </p>
