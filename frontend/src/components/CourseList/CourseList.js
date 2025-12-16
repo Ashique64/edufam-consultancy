@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Preloader from "../Preloader/Preloader";
 import "./CourseList.scss";
 
 const CourseList = () => {
@@ -14,6 +15,12 @@ const CourseList = () => {
     const [categoryData, setCategoryData] = useState(null);
 
     const categoryTitle = params.categoryTitle;
+
+    const handleWhatsAppRedirect = (text = "Hi! I'd like to know more.") => {
+        const phone = "919074506060";
+        const encodedText = encodeURIComponent(text);
+        window.open(`https://wa.me/${phone}?text=${encodedText}`, "_blank");
+    };
 
     const courseDatabase = {
         "Engineering & Technology": {
@@ -151,18 +158,11 @@ const CourseList = () => {
     const handleBackClick = () => router.back();
 
     const handleConsultationClick = () => {
-        const phone = "919074506060";
-        const text = encodeURIComponent("Hi! I'd like to know more.");
-        window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+        handleWhatsAppRedirect();
     };
 
     if (!categoryData) {
-        return (
-            <div className="course-list-loading">
-                <div className="loading-spinner"></div>
-                <p>Loading courses...</p>
-            </div>
-        );
+        return <Preloader />;
     }
 
     return (
@@ -184,7 +184,7 @@ const CourseList = () => {
                         <div className="category-overlay">
                             <h1 className="category-main-title">{decodeURIComponent(categoryTitle)}</h1>
                             <div className="category-subtitle">
-                                <span className="course-count">{courses.length} Programs Available</span>
+                                <span className="course-count">All Programs Available</span>
                             </div>
                         </div>
                     </div>
@@ -215,17 +215,20 @@ const CourseList = () => {
                                         <tr key={idx} data-aos="fade-up">
                                             <td className="serial-cell">{idx + 1}</td>
 
-                                            <td className="course-name">{course}</td>
+                                            <td
+                                                className="course-name mobile-clickable"
+                                                onClick={() => handleWhatsAppRedirect(`Hi! I'm interested in ${course}`)}
+                                            >
+                                                {course}
+                                            </td>
 
                                             <td className="actions-cell">
                                                 <div className="action-buttons">
                                                     <button
                                                         className="eligibility-btn"
-                                                        onClick={() => {
-                                                            const phone = "919074506060";
-                                                            const text = encodeURIComponent("Hi! I'd like to know more.");
-                                                            window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-                                                        }}
+                                                        onClick={() =>
+                                                            handleWhatsAppRedirect(`Hi! I'm interested in ${course}`)
+                                                        }
                                                     >
                                                         Check Eligibility
                                                     </button>

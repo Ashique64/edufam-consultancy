@@ -49,49 +49,27 @@ const Navbar = () => {
                         <div id="mobile_menu">
                             <ul className={menuIcon ? "show" : ""}>
                                 <li>
-                                    <Link
-                                        href="#hero"
-                                        style={{ color: isSticky ? "var(--primary-color)" : "var(--secondary-color)" }}
-                                        onClick={handleNavItemClick}
-                                    >
+                                    <Link href="#hero" onClick={handleNavItemClick}>
                                         Home
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="/about"
-                                        style={{
-                                            color: isSticky ? "var(--primary-color)" : "var(--secondary-color)",
-                                        }}
-                                        onClick={handleNavItemClick}
-                                    >
+                                    <Link href="/about" onClick={handleNavItemClick}>
                                         About us
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="#courses"
-                                        style={{ color: isSticky ? "var(--primary-color)" : "var(--secondary-color)" }}
-                                        onClick={handleNavItemClick}
-                                    >
+                                    <Link href="#courses" onClick={handleNavItemClick}>
                                         Courses
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="#how-it-works"
-                                        style={{ color: isSticky ? "var(--primary-color)" : "var(--secondary-color)" }}
-                                        onClick={handleNavItemClick}
-                                    >
+                                    <Link href="#how-it-works" onClick={handleNavItemClick}>
                                         How it works
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href="#contact"
-                                        style={{ color: isSticky ? "var(--primary-color)" : "var(--secondary-color)" }}
-                                        onClick={handleNavItemClick}
-                                    >
+                                    <Link href="#contact" onClick={handleNavItemClick}>
                                         Contact
                                     </Link>
                                 </li>
@@ -104,7 +82,7 @@ const Navbar = () => {
                             <div className="mobile_icon" onClick={handleMenuIcon}>
                                 <i
                                     className={menuIcon ? "" : "bx bx-menu"}
-                                    style={{ color: isSticky ? "var(--primary-color)" : "var(--secondary-color)" }}
+                                    style={{ color: isSticky ? "var(--primary-dark)" : "var(--secondary-color)" }}
                                 ></i>
                             </div>
                         </div>

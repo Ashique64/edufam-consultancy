@@ -21,25 +21,25 @@
 
     .back-button {
         position: fixed;
-        top: 20px;
-        left: 30px;
-        background: var(--secondary-color);
-        background: transparent;
-        border: 2px solid var(--accent-color);
+        top: 25px; // Standardized
+        left: 25px; // Standardized
+        background: rgba(255, 255, 255, 0.9); // Glassy white base
+        border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50px;
-        padding: 12px 20px;
+        padding: 10px 20px;
         display: flex;
         align-items: center;
         gap: 8px;
-        color: var(--accent-color);
+        color: var(--primary-dark);
         font-family: var(--secondary-font);
-        font-weight: 500;
-        font-size: 0.9rem;
+        font-weight: 600;
+        font-size: 0.95rem;
         cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(36, 80, 123, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         z-index: 1000;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
 
         .back-text {
             display: inline;
@@ -47,18 +47,22 @@
 
         &:hover {
             background: var(--primary-color);
-            background: transparent;
-            color: var(--accent-dark);
-            border-color: var(--accent-dark);
-            box-shadow: 0 8px 25px rgba(36, 80, 123, 0.15);
-            transform: translateY(-2px);
+            color: #fff; // Force white text on hover
+            border-color: var(--primary-color);
+            transform: translateX(-5px); // Slide left slightly
+            box-shadow: 0 8px 20px rgba(36, 80, 123, 0.2);
+
+            svg path {
+                stroke: #fff; // Force white icon on hover
+            }
         }
+
         svg {
             transition: transform 0.3s ease;
             flex-shrink: 0;
-        }
-        &:hover svg {
-            transform: translateX(-3px);
+            path {
+                stroke: var(--primary-dark); // Default stroke
+            }
         }
     }
 
@@ -524,6 +528,7 @@
             left: 20px;
             justify-content: center;
         }
+
         .course-list-container {
             padding: 0;
             .category-header-section .category-image-container {
@@ -544,53 +549,64 @@
                 .courses-responsive-table {
                     border-radius: 12px;
                     padding: 0px 0px;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
+                    overflow-x: hidden; // Prevent scrolling
+
                     .table-wrapper {
                         padding-bottom: 12px;
                     }
                     .course-table {
-                        min-width: 400px;
+                        min-width: 100%; // Fit to screen width
+
+                        .serial-col,
+                        .serial-cell,
+                        .actions-col,  // Hide actions column on mobile
+                        .actions-cell {
+                            display: none;
+                        }
+
                         .program-col {
-                            min-width: 120px;
+                            width: 100%; // Takes full width
+                            min-width: 0;
+                            padding-right: 0;
                         }
-                        .actions-col,
+
+                        // Hide other potentially unused columns if they exist in DOM but are hidden
                         .duration-col,
-                        .level-col,
-                        .serial-col {
-                            min-width: 70px;
+                        .level-col {
+                            display: none;
                         }
+
                         thead th {
-                            padding: 12px 8px;
-                            font-size: 0.8rem;
+                            padding: 12px 15px; // More padding for header
+                            font-size: 0.9rem;
                         }
                         tbody td {
-                            padding: 10px 8px;
-                            font-size: 0.85rem;
+                            padding: 15px; // Larger tap target
+                            font-size: 0.95rem;
                         }
                         .course-name {
-                            font-size: 0.9rem;
-                            line-height: 1.3;
-                        }
-                        .level-cell .level-badge {
-                            font-size: 0.75rem;
-                            padding: 4px 8px;
-                        }
-                        .actions-cell .action-buttons {
-                            flex-direction: column;
-                            gap: 4px;
-                            align-items: stretch;
-                        }
-                        .eligibility-btn,
-                        .details-btn {
-                            padding: 5px 8px;
-                            font-size: 0.75rem;
-                            border-radius: 15px;
-                            .btn-text-full {
-                                display: none;
+                            font-size: 1rem;
+                            line-height: 1.5;
+                            font-weight: 500;
+                            white-space: normal; // Ensure text wraps
+                            cursor: pointer; // Indicate clickability
+                            color: var(--primary-dark);
+
+                            // Add an arrow or indicator via pseudo-element to suggest interaction?
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            &::after {
+                                content: "→";
+                                color: var(--primary-color);
+                                font-weight: bold;
+                                font-size: 1.2rem;
+                                margin-left: 10px;
                             }
-                            .btn-text-short {
-                                display: inline;
+
+                            &:active {
+                                background-color: rgba(36, 80, 123, 0.05);
                             }
                         }
                     }
