@@ -29,14 +29,17 @@ const Footer = () => {
                                         <a href="#" aria-label="LinkedIn">
                                             <FaLinkedinIn />
                                         </a>
-                                        <a href="https://www.instagram.com/edu.fam?igsh=MXhjczk0anNqdWJuZA==" aria-label="Instagram">
+                                        <a
+                                            href="https://www.instagram.com/edu.fam?igsh=MXhjczk0anNqdWJuZA=="
+                                            aria-label="Instagram"
+                                        >
                                             <FaInstagram />
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="col-lg-3 col-md-6 col-6 mb-4">
                                 <div className="footer-section">
                                     <h4>Quick Links</h4>
                                     <ul>
@@ -56,7 +59,7 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-md-6 mb-4">
+                            <div className="col-lg-3 col-md-6 col-6 mb-4">
                                 <div className="footer-section">
                                     <h4>Contact Info</h4>
                                     <div className="contact-info">
@@ -80,7 +83,9 @@ const Footer = () => {
 
                     <div className="footer-bottom">
                         <div className="footer-bottom-content">
-                            <p>&copy; {currentYear} <a href="https://cozech.com/">COZECH</a>. All rights reserved.</p>
+                            <p>
+                                &copy; {currentYear} <a href="https://cozech.com/">COZECH</a>. All rights reserved.
+                            </p>
                         </div>
                     </div>
                 </div>

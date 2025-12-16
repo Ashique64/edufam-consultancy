@@ -8,12 +8,12 @@
     background: transparent;
 
     &.sticky {
-        padding: 15px 25px;
-        background: rgba(255, 255, 255, 0.85);
+        padding: 18px 25px;
+        background: rgba(19, 79, 209, 0.286);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
         &::before {
             display: none;
@@ -23,7 +23,7 @@
             color: var(--primary-dark);
 
             &::after {
-                background-color: var(--primary-dark);
+                background-color: var(--primary-color);
             }
 
             &:hover {

@@ -180,15 +180,41 @@
         }
 
         .brand-section .social-links {
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .contact-info .contact-item {
-            justify-content: center;
+            justify-content: flex-start; /* Align left for better readability in row */
+            flex-direction: row; /* Keep in same row */
+            gap: 8px;
+            text-align: left;
+            align-items: flex-start; /* Align icon with top line of text if wrapping */
+
+            span {
+                font-size: 0.8rem;
+                line-height: 1.4;
+                word-break: break-word; /* Ensure long emails don't overflow */
+            }
+
+            svg {
+                // Ensure icon doesn't shrink and stays aligned
+                flex-shrink: 0;
+                margin-top: 3px;
+            }
         }
 
         .footer-section {
-            text-align: center;
+            text-align: left; /* Align section content left on mobile for better fit */
+            padding-left: 5px; /* Add slight padding */
+
+            h4 {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            ul li a {
+                font-size: 0.9rem;
+            }
         }
     }
 }

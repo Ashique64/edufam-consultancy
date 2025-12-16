@@ -184,7 +184,7 @@ const CourseList = () => {
                         <div className="category-overlay">
                             <h1 className="category-main-title">{decodeURIComponent(categoryTitle)}</h1>
                             <div className="category-subtitle">
-                                <span className="course-count">All Programs Available</span>
+                                <span className="course-count">Top Programs</span>
                             </div>
                         </div>
                     </div>
@@ -238,6 +238,17 @@ const CourseList = () => {
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+
+                        {/* New Enquiry Section */}
+                        <div className="more-programs-section" data-aos="fade-up">
+                            <p className="more-text">For more programs</p>
+                            <button
+                                className="enquiry-btn"
+                                onClick={() => handleWhatsAppRedirect("Hi! I'd like to enquire about more programs.")}
+                            >
+                                Enquiry
+                            </button>
                         </div>
                     </div>
                 </div>
