@@ -22,6 +22,7 @@ const AboutPage = () => {
     const router = useRouter();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
     }, []);
 
