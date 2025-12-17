@@ -139,6 +139,7 @@
             height: 120px;
             overflow: hidden;
             transition: 0.3s ease-in-out;
+            user-select: none; /* Disable selection */
 
             &:hover {
                 transform: translateY(-4px);

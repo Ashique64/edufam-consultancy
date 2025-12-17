@@ -142,6 +142,7 @@
             transition: all 0.35s ease;
             position: relative;
             overflow: hidden;
+            user-select: none; /* Disable selection */
 
             &:hover {
                 transform: translateY(-10px);
@@ -424,6 +425,8 @@
                     height: 100%;
                     object-fit: contain;
                     transition: transform 0.5s ease;
+                    user-select: none; /* Disable selection */
+                    pointer-events: none; /* Disable pointer events */
 
                     &:hover {
                         transform: scale(1.05);
@@ -446,7 +449,7 @@
                 }
 
                 .name {
-                    font-weight: 600;
+                    font-weight: 400;
                     color: var(--primary-dark);
                     font-family: var(--primary-font);
                     font-size: 1.1rem;

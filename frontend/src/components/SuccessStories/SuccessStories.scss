@@ -151,6 +151,7 @@
                     overflow: hidden;
                     border: 3px solid rgba(3, 30, 118, 0.85);
                     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    user-select: none; /* Disable selection */
 
                     &:hover {
                         transform: scale(1.03) translateY(-5px);

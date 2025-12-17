@@ -184,6 +184,7 @@
                     overflow: hidden;
                     position: relative;
                     background: #eef2f6;
+                    user-select: none; /* Disable selection */
 
                     .category-image {
                         width: 100%;
@@ -242,6 +243,7 @@
                             transition: color 0.3s ease;
                             text-transform: uppercase;
                             letter-spacing: 0.5px;
+                            user-select: none; /* Disable selection */
 
                             .arrow-icon {
                                 font-size: 0.8rem;
