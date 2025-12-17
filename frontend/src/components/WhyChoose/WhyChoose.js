@@ -25,7 +25,7 @@ const WhyChoose = () => {
         {
             id: 2,
             title: "High Success Rate",
-            description: "98% visa approval rate with our comprehensive application preparation and support.",
+            description: "100% visa approval rate with our comprehensive application preparation and support.",
             icon: <FaChartLine />,
             color: PRIMARY,
             bgGradient: ICON_GRADIENT,
@@ -61,22 +61,16 @@ const WhyChoose = () => {
 
     const testimonials = [
         {
-            name: "Muhammadu Farooqu",
-            course: "Justus Liebig University Giessen",
-            text: "EduFam made my dream of studying in Germany a reality. Their guidance was invaluable throughout the process.",
-            rating: 5,
-        },
-        {
             name: "Shibil Muhammed",
-            course: "Justus Liebig University Giessen",
-            text: "Outstanding support from application to visa approval. Highly recommend their services to everyone.",
-            rating: 5,
+            image: "/Images/visa/visa-1.jpeg",
         },
         {
-            name: "Hadiya",
-            course: "Justus Liebig University Giessen",
-            text: "Professional, reliable, and genuinely caring. They supported me every step of the way to Germany.",
-            rating: 5,
+            name: "Muhammadu Farooqu",
+            image: "/Images/visa/visa-2.jpeg",
+        },
+        {
+            name: "Haniya",
+            image: "/Images/visa/visa-3.jpeg",
         },
     ];
 
@@ -211,7 +205,7 @@ const WhyChoose = () => {
                         >
                             <h3 className="testimonial-header">
                                 <FaStar className="star-icon" />
-                                Student Stories
+                                Visa Success
                             </h3>
 
                             <div className="testimonial-carousel">
@@ -220,17 +214,17 @@ const WhyChoose = () => {
                                         key={index}
                                         className={`testimonial-card ${index === currentTestimonial ? "active" : ""}`}
                                     >
-                                        <div className="testimonial-content">
-                                            <div className="quote-mark">"</div>
-                                            <p className="testimonial-text">{testimonial.text}</p>
-                                            <div className="testimonial-rating">
-                                                {[...Array(testimonial.rating)].map((_, i) => (
-                                                    <FaStar key={i} className="star" />
-                                                ))}
+                                        <div className="testimonial-content image-content">
+                                            <div className="image-container">
+                                                <img
+                                                    src={testimonial.image}
+                                                    alt={`Visa success of ${testimonial.name}`}
+                                                    className="visa-image"
+                                                />
                                             </div>
-                                            <div className="testimonial-meta">
+                                            <div className="testimonial-meta mt-3">
                                                 <span className="name">{testimonial.name}</span>
-                                                <span className="course">{testimonial.course}</span>
+                                                <span className="course highlight-text">Visa Approved</span>
                                             </div>
                                         </div>
                                     </div>

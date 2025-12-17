@@ -93,11 +93,20 @@ const Contact = () => {
         {
             id: 1,
             icon: <FaPhone />,
-            title: "Phone",
+            title: "Phone (India)",
             value: "+91 9074506060",
             description: "Call us anytime",
             color: "#10b981",
             gradient: "linear-gradient(135deg, #10b981, #059669)",
+        },
+        {
+            id: 4,
+            icon: <FaPhone />,
+            title: "Phone (Germany)",
+            value: "+49 1521 7929304",
+            description: "International Support",
+            color: "#8b5cf6",
+            gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)",
         },
         {
             id: 2,
@@ -112,20 +121,22 @@ const Contact = () => {
             id: 3,
             icon: <FaMapMarkerAlt />,
             title: "Address",
-            value: "123 Education Street",
-            description: "Kochi, Kerala, India",
+            value: "Near Rivershore Hospital",
+            description: "Thamarassery, Calicut, Kerala",
             color: "#f59e0b",
             gradient: "linear-gradient(135deg, #f59e0b, #d97706)",
         },
     ];
 
     const handleContactCardClick = (info) => {
-        if (info.title === "Phone") {
+        if (info.title.toLowerCase().includes("phone")) {
             window.location.href = `tel:${info.value.replace(/\s+/g, "")}`;
         } else if (info.title === "Email") {
             window.location.href = `mailto:${info.value}`;
         } else if (info.title === "Address") {
-            const mapQuery = encodeURIComponent(info.value);
+            // Combine value and description for a better map search
+            const fullAddress = `${info.value}, ${info.description}`;
+            const mapQuery = encodeURIComponent(fullAddress);
             window.open(`https://www.google.com/maps/search/?api=1&query=${mapQuery}`, "_blank");
         }
     };

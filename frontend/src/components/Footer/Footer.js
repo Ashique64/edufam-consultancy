@@ -73,7 +73,7 @@ const Footer = () => {
                                         </div>
                                         <div className="contact-item">
                                             <FaMapMarkerAlt />
-                                            <span>Kochi, Kerala, India</span>
+                                            <span>Thamarassery, Calicut, Kerala</span>
                                         </div>
                                     </div>
                                 </div>
