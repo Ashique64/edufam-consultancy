@@ -213,6 +213,21 @@
             cursor: pointer;
             // box-shadow: 0 4px 20px rgba(36, 80, 123, 0.08);
 
+            .reason-bg-icon {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                font-size: 7rem;
+                color: rgba(0, 0, 0, 0.03);
+                z-index: 0;
+                pointer-events: none;
+                transition: all 0.35s ease;
+
+                svg {
+                    display: block;
+                }
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -235,6 +250,11 @@
                     transform: scale(1.08) rotate(3deg);
                 }
 
+                .reason-bg-icon {
+                    color: rgba(0, 0, 0, 0.05);
+                    transform: scale(1.05);
+                }
+
                 .reason-border {
                     width: 100%;
                 }
@@ -249,6 +269,8 @@
                 justify-content: space-between;
                 align-items: flex-start;
                 margin-bottom: 1.4rem;
+                position: relative;
+                z-index: 1;
             }
 
             .reason-icon {
@@ -265,6 +287,9 @@
             }
 
             .reason-stats {
+                position: absolute;
+                top: 0;
+                right: 0;
                 text-align: right;
                 background: linear-gradient(135deg, #f6f9fc, #eef3f7);
                 padding: 0.6rem 1rem;
@@ -300,6 +325,8 @@
                 margin-bottom: 0.8rem;
                 line-height: 1.3;
                 transition: color 0.3s ease;
+                position: relative;
+                z-index: 1;
             }
 
             .reason-description {
@@ -308,6 +335,8 @@
                 font-family: var(--para-font);
                 line-height: 1.6;
                 margin-bottom: 1rem;
+                position: relative;
+                z-index: 1;
             }
 
             .reason-border {

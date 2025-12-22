@@ -176,6 +176,7 @@ const WhyChoose = () => {
                                         onMouseEnter={() => setActiveCard(reason.id)}
                                         onMouseLeave={() => setActiveCard(null)}
                                     >
+                                        <div className="reason-bg-icon">{reason.icon}</div>
                                         <div className="reason-header">
                                             <div className="reason-icon" style={{ background: reason.bgGradient }}>
                                                 {reason.icon}
