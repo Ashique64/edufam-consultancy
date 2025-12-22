@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaStar, FaQuoteLeft, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar, FaQuoteLeft, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaCheckCircle } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -136,6 +136,10 @@ const SuccessStories = () => {
                                             <div className="image-overlay">
                                                 <FaExternalLinkAlt className="overlay-icon" />
                                                 <p>View Certificate</p>
+                                            </div>
+                                            <div className="verified-badge">
+                                                <FaCheckCircle className="badge-icon" />
+                                                <span>Verified Admission</span>
                                             </div>
                                         </div>
                                     </div>
