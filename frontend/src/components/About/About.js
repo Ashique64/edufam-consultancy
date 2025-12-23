@@ -74,6 +74,12 @@ const AboutPage = () => {
 
     const handleBackClick = () => router.back();
 
+    const handleGetStartedClick = () => {
+        const phone = "919074506060";
+        const text = encodeURIComponent("Hi! I'd like to get started with EduFam consultancy.");
+        window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    };
+
     return (
         <div className="about-page">
             <button className="back-button" onClick={handleBackClick} data-aos="fade-right" data-aos-duration="800">
@@ -207,9 +213,9 @@ const AboutPage = () => {
                             Together, we&apos;ll turn your dreams into reality.
                         </p>
                         <div className="cta-buttons">
-                            <Link href="/#contact" className="text-decoration-none">
-                                <button className="btn btn-primary">Get Started Today</button>
-                            </Link>
+                            <button onClick={handleGetStartedClick} className="btn btn-primary">
+                                Get Started Today
+                            </button>
                         </div>
                     </div>
                 </div>

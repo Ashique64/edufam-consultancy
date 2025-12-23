@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { FaStar, FaUsers, FaGraduationCap, FaHandshake, FaGlobe, FaAward, FaHeadset, FaChartLine } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./WhyChoose.scss";
 
 const WhyChoose = () => {
+    const router = useRouter();
     const [activeCard, setActiveCard] = useState(null);
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
@@ -78,6 +80,10 @@ const WhyChoose = () => {
         const phone = "919074506060";
         const text = encodeURIComponent("Hi! I'd like to know more.");
         window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    };
+
+    const handleLearnMoreClick = () => {
+        router.push("/about");
     };
 
     useEffect(() => {
@@ -257,7 +263,9 @@ const WhyChoose = () => {
                                     <FaHeadset />
                                     Book Free Consultation
                                 </button>
-                                <button className="btn btn-secondary cta-button">Learn More</button>
+                                <button onClick={handleLearnMoreClick} className="btn btn-secondary cta-button">
+                                    Learn More
+                                </button>
                             </div>
                         </div>
                     </div>
