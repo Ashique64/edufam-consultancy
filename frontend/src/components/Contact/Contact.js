@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaUser } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import axios from "axios";
-import { baseUrl } from "@/utils/baseUrl";
 import "./Contact.scss";
 
 const Contact = () => {
@@ -21,6 +19,8 @@ const Contact = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [responseMessage, setResponseMessage] = useState("");
     const [isError, setIsError] = useState(false);
+
+    const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
 
     useEffect(() => {
         setMounted(true);
@@ -62,28 +62,42 @@ const Contact = () => {
         setIsError(false);
 
         try {
-            const response = await axios.post(`${baseUrl}/api/contact/`, {
-                fullName: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                message: formData.message,
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    fullName: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message,
+                }),
             });
 
-            if (response.status === 200) {
-                setResponseMessage(response.data.message || "Thank you for your message! We'll get back to you soon.");
-                setIsError(false);
-                setFormData({ name: "", email: "", phone: "", message: "" });
-            } else {
-                setResponseMessage("There was an error sending your message. Please try again.");
-                setIsError(true);
-            }
+            // ✅ With no-cors mode, we can't read the response, so assume success if no error is thrown
+            setResponseMessage("Thank you for your message! We'll get back to you soon.");
+            setIsError(false);
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+
+            // Auto-dismiss success message after 5 seconds
+            setTimeout(() => {
+                setResponseMessage("");
+            }, 5000);
         } catch (error) {
-            if (error.response && error.response.data && error.response.data.error) {
-                setResponseMessage(error.response.data.error);
-            } else {
-                setResponseMessage("A network or server error occurred. Please try again.");
-            }
             setIsError(true);
+            setResponseMessage("Something went wrong. Please try again.");
+
+            // Auto-dismiss error message after 5 seconds
+            setTimeout(() => {
+                setResponseMessage("");
+            }, 5000);
         } finally {
             setIsSubmitting(false);
         }
@@ -324,8 +338,59 @@ const Contact = () => {
                                 </button>
                             </form>
                             {responseMessage && (
-                                <div className={`form-response-message ${isError ? "form-error" : "form-success"}`}>
-                                    {responseMessage}
+                                <div className={`toast-notification ${isError ? "toast-error" : "toast-success"} show`}>
+                                    <div className="toast-icon">
+                                        {isError ? (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                            </svg>
+                                        ) : (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                            </svg>
+                                        )}
+                                    </div>
+                                    <div className="toast-content">
+                                        <div className="toast-title">{isError ? "Error" : "Success"}</div>
+                                        <div className="toast-message">{responseMessage}</div>
+                                    </div>
+                                    <button
+                                        className="toast-close"
+                                        onClick={() => setResponseMessage("")}
+                                        aria-label="Close notification"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </button>
                                 </div>
                             )}
                         </div>
