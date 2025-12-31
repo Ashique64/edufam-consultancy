@@ -18,7 +18,7 @@ export default function Home() {
         const handleLoad = () => {
             setTimeout(() => {
                 setLoading(false);
-            }, 2000);
+            }, 500);
         };
 
         if (document.readyState === "complete") {
