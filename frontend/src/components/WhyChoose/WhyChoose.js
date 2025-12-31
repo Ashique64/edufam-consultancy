@@ -74,6 +74,10 @@ const WhyChoose = () => {
             name: "Haniya",
             image: "/Images/visa/visa-3.jpeg",
         },
+        {
+            name: "Muhammed",
+            image: "/Images/visa/visa-4.jpeg",
+        },
     ];
 
     const handleConsultationClick = () => {
