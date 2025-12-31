@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import "./Footer.scss";
 
@@ -20,20 +20,21 @@ const Footer = () => {
                                         guidance and support.
                                     </p>
                                     <div className="social-links">
-                                        <a href="#" aria-label="Facebook">
-                                            <FaFacebookF />
-                                        </a>
-                                        <a href="#" aria-label="Twitter">
-                                            <FaTwitter />
-                                        </a>
-                                        <a href="#" aria-label="LinkedIn">
-                                            <FaLinkedinIn />
-                                        </a>
                                         <a
                                             href="https://www.instagram.com/edu.fam?igsh=MXhjczk0anNqdWJuZA=="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             aria-label="Instagram"
                                         >
                                             <FaInstagram />
+                                        </a>
+                                        <a
+                                            href="https://wa.me/919074506060"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="WhatsApp"
+                                        >
+                                            <FaWhatsapp />
                                         </a>
                                     </div>
                                 </div>
