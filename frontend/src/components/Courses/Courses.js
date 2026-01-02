@@ -116,13 +116,7 @@ const Courses = () => {
 
                 <div className="row categories-row px-lg-5">
                     {courseCategories.map((category, index) => (
-                        <div
-                            key={category.id}
-                            className="col-lg-4 col-md-6 col-sm-6 mb-4"
-                            data-aos="fade-up"
-                            data-aos-delay={index * 150}
-                            data-aos-duration="1000"
-                        >
+                        <div key={category.id} className="col-lg-4 col-md-6 col-sm-6 mb-4">
                             <div
                                 className="category-card h-100"
                                 onMouseEnter={() => setHoveredCard(category.id)}
